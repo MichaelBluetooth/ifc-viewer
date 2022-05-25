@@ -1,0 +1,36 @@
+<div class="wrapper h-100">
+  <ng-template #spatialStructTmpl let-node="node">
+    <li class="me-2">
+      <div [id]="node.nodeId" class="d-flex align-items-center" [class.selected]="isSelected(node)">
+        <div class="">
+          <button mat-icon-button *ngIf="node.collapsed" (click)="node.collapsed = !node.collapsed">
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+          <button mat-icon-button *ngIf="!node.collapsed" (click)="node.collapsed = !node.collapsed">
+            <mat-icon>expand_more</mat-icon>
+          </button>
+        </div>
+
+        <span class="clickable d-inline-block text-truncate ms-2" style="xmax-width: 200px;" (click)="select(node)"
+          (contextmenu)="openContextMenu(node, $event)" [class.text-decoration-line-through]="isHidden(node)">
+          <ng-container *ngIf="node.isGroup">
+            <span>{{node.label | pluralizeIFCType}}</span>
+          </ng-container>
+          <ng-container *ngIf="!node.isGroup">
+            <span>{{node.label}}</span>
+          </ng-container>
+        </span>
+      </div>
+
+      <ng-container *ngIf="!node.collapsed && node.children?.length > 0">
+        <ul class="mt-2" *ngFor="let child of node.children">
+          <ng-container *ngTemplateOutlet="spatialStructTmpl; context: { node: child }"></ng-container>
+        </ul>
+      </ng-container>
+    </li>
+  </ng-template>
+
+  <ul *ngIf="tree" style="padding: 0">
+    <ng-container *ngTemplateOutlet="spatialStructTmpl; context: { node: tree }"></ng-container>
+  </ul>
+</div>

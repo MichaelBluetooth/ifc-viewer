@@ -1,0 +1,19 @@
+<input #fileUpload type="file" class="d-none" (change)="upload()" accept=".ifc">
+<div class="d-flex">
+  <div class="flex-column">
+    <button mat-fab color="primary" title="Upload an IFC file" (click)="fileUpload.click()">
+      <mat-icon>file_upload</mat-icon>
+    </button>
+    <button mat-fab color="primary" title="Reload the current IFC file" (click)="reset()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+    <button mat-fab [color]="showStructure ? 'accent' : 'primary'" title="View the IFC structure" (click)="toggleStructure()">
+      <mat-icon>account_tree</mat-icon>
+    </button>
+    <button mat-fab color="primary" title="View the IFC properties for the selected element">
+      <mat-icon>dataset</mat-icon>
+    </button>
+  </div>
+
+  <app-structure-panel *ngIf="showStructure"></app-structure-panel>
+</div>

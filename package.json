@@ -11,15 +11,27 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.0.0",
+    "@angular/cdk": "^13.3.7",
     "@angular/common": "~13.0.0",
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
     "@angular/forms": "~13.0.0",
+    "@angular/material": "^13.3.7",
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@types/pluralize": "0.0.29",
+    "@types/three": "^0.140.0",
+    "bootstrap": "^5.1.3",
+    "material-design-icons": "^3.0.1",
+    "pluralize": "^8.0.0",
     "rxjs": "~7.4.0",
+    "three": "^0.139.2",
+    "three-mesh-bvh": "^0.5.10",
     "tslib": "^2.3.0",
+    "web-ifc": "0.0.34",
+    "web-ifc-three": "0.0.112",
+    "web-ifc-viewer": "^1.0.172",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -34,6 +46,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-packagr": "^13.0.0",
     "typescript": "~4.4.3"
   }
 }
