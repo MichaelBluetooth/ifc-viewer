@@ -1,0 +1,14 @@
+<div class="d-flex flex-column gap-3">
+  <button mat-fab [color]="panOnlyEnabled ? 'accent':'primary'" title="Toggle pan-only mode" (click)="togglePanOnlyMode()">
+    <mat-icon>pan_tool</mat-icon>
+  </button>
+  <button mat-fab [color]="rotateOnlyMode ? 'accent':'primary'" title="Toggle rotate only mode" (click)="toggleRotateOnlyMode()">
+    <mat-icon>360</mat-icon>
+  </button>
+  <button mat-fab color="primary" title="Zoom in" (click)="zoomIn()">
+    <mat-icon>zoom_in</mat-icon>
+  </button>
+  <button mat-fab color="primary" title="Zoom out" (click)="zoomOut()">
+    <mat-icon>zoom_out</mat-icon>
+  </button>
+</div>

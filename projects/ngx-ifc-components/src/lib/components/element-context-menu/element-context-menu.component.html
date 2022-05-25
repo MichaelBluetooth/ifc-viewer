@@ -1,0 +1,16 @@
+<div class="wrapper shadow-lg" [style.top]="positionY  + 'px'" [style.left]="positionX + 'px'">
+  <div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action" (click)="select()">
+      <i class='bx bxs-hand-up'></i> Select
+    </button>
+    <button type="button" class="list-group-item list-group-item-action" (click)="hide()">
+      <i class='bx bx-hide'></i> Hide
+    </button>
+    <button type="button" class="list-group-item list-group-item-action" (click)="hideOthers()">
+      <i class='bx bxs-hide'></i> Hide Others
+    </button>
+    <button type="button" class="list-group-item list-group-item-action" (click)="show()">
+      <i class='bx bx-show'></i> Show
+    </button>
+  </div>
+</div>

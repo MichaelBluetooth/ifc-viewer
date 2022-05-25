@@ -1,0 +1,23 @@
+<div class="f-row">
+  <button mat-fab color="primary" title="Select all visible elements" (click)="selectAll()">
+    <mat-icon>select_all</mat-icon>
+  </button>
+  <button mat-fab color="primary" title="Unselect all elements" (click)="hideSelected()">
+    <mat-icon>deselect</mat-icon>
+  </button>
+  <button mat-fab color="primary" title="Show all elements" (click)="showAll()">
+    <mat-icon>visibility</mat-icon>
+  </button>
+  <button mat-fab color="primary" title="Hide the selected elements" (click)="hideSelected()">
+    <mat-icon>visibility_off</mat-icon>
+  </button>
+  <button mat-fab color="primary" title="Hide the non-selected elements" (click)="hideOthers()">
+    <mat-icon>hide_image_outline</mat-icon>
+  </button>
+  <button mat-fab color="primary" title="Undo the previous action" (click)="undo()">
+    <mat-icon>undo</mat-icon>
+  </button>
+  <button mat-fab color="primary" title="Record a snapshot" (click)="snapshot()">
+    <mat-icon>add_a_photo</mat-icon>
+  </button>
+</div>
